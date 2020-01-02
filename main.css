@@ -1,0 +1,244 @@
+body {
+    font-family: sans;
+    height: 100vh;
+    width: 100vw;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#nav {
+    z-index: 2;
+    background-color: #636363;
+    height: 15%;
+    width: 100%;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;    
+}
+
+#HOME {
+    background-image: url('assets/senseics_logo.svg');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0px;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;    
+    height: 100%;
+    width: 95%;
+}
+
+#menu {
+    color: #2000fb;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 5%;
+}
+
+#tab {
+    margin-right: 10px;
+    color: white;
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu-drawer {
+    z-index: 1;
+    background-color: #2000fb;
+    color: #2000fb;
+    font-size: 0.75em;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;;
+    width: 100%;
+    height: 5%;
+    position: absolute;
+}
+
+.tabs {
+    color: white;
+    height: 100%;
+    width: 10%;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#display {
+    background-color: #5c5c5c;
+    height: 85%;
+    width: 100%;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-txt {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+}
+
+.about-pic {
+    height: 100%;
+    width: 40%;
+}
+
+.home-frame {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-txt {
+    color: white;
+    background-color: #5c5c5c;
+    height: 100%;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;    
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.p {
+    max-width: 95%;
+    margin: 5px;
+}
+
+.home-pic {
+    width: 45%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 20px solid #5c5c5c;
+}
+
+.pic-box {
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.about {
+    height: 95%;
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.frame {
+    color: #2000fb;
+    font-size: 2em;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.fade-in {
+    animation: in 1.5s forwards; 
+}
+
+.fade-out {
+    animation: out 1.5s forwards; 
+}
+
+.open {
+    animation: open 1s forwards;
+}
+
+.close {
+    animation: close 1s forwards;
+}
+
+@keyframes in {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+@keyframes out {
+    from {opacity: 1}
+    to {opacity: 0}
+}
+
+@keyframes open {
+    from {top: 0%}
+    to {top: 15%}
+}
+
+@keyframes close {
+    from {top: 15%}
+    to {top: 0%}
+}
+
+@keyframes open-mobile {
+    from {top: 0%}
+    to {top: 10%}
+}
+
+@keyframes close-mobile {
+    from {top: 10%}
+    to {top: 0%}
+}
+
+@media screen and (max-width:600px) {
+    #nav {
+        height: 10%;
+    }
+
+    #display {
+        height: 90%;
+    }
+
+    .home-frame {
+        flex-direction: column;
+    }
+
+    .home-txt {
+        width: 100%;
+        height: 55%;
+    }
+    .home-pic {
+        width: 100%;
+        height: 45%;
+    }
+
+    .open {
+        animation: open-mobile 1s forwards;
+    }
+    
+    .close {
+        animation: close-mobile 1s forwards;
+    }
+ }
